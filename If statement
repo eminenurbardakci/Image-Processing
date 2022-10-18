@@ -1,0 +1,8 @@
+a = 200
+b = 33
+if b > a:
+  print("b, a'dan büyüktür")
+elif a == b:
+  print("a, b'ye eşittir")
+else:
+  print("a, b'den büyüktür")
