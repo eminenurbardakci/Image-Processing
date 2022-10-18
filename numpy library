@@ -1,0 +1,4 @@
+import numpy as phyton
+  
+array = phyton.random.randn(5)
+print("1D Array filled with random values:\n",array);
