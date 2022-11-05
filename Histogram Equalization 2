@@ -1,0 +1,4 @@
+img = cv.imread('wiki.jpg',0)
+equ = cv.equalizeHist(img)
+res = np.hstack((img,equ))
+cv.imwrite('res.png',res)
