@@ -1,0 +1,12 @@
+I=imread('cameraman.png')
+II=im2double(I)
+
+c=255/log10(255+1)
+s=c*log10(II+1)
+ss=uint8(s)
+
+subplot(1,2,1)
+cv2.imshow('Orjinal resim',I)
+
+subplot(1,2,2)
+cv2.imshow('Dönüşüm sonrası oluşan resim',ss)
