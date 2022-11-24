@@ -1,0 +1,11 @@
+A=imread('Ornek_01.png');
+B=rgb2gray(A);
+C=double(B);
+for i=2:size(C,1)-1
+  for j=2:size(C,2)-1
+    Gx=((2*C(i+1,j)+C(i+1,j+1)+C(i+1,j-1))-(2*C(i-1,j)+C(i-1,j-1)+C(i-1,j+1)));
+    Gy=((2*C(i,j-1)+C(i-1,j-1)+C(i+1,j-1))-(2*C(i,j+1)+C(i-1,j+1)+C(i+1,j+1)));
+    B(i,j)=sqrt(Gx.^2+Gy.^2);
+   end
+end
+cv2.imshow('Sobel gradient',B)
